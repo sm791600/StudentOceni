@@ -7,14 +7,30 @@ import java.util.Scanner;
 public class OcenkaStudent {
 
 	public static void main(String[] args) {
-		int maxP, osvP;
+		int maxP=0, osvP=0, procent=0;
 		System.out.println("Vnesi maksimum bodovi koi moze da se osvojat na testot\n");
 		Scanner tastatura =new Scanner(System.in);
 		maxP=tastatura.nextInt();
 		System.out.println("Vnesi osvoeni bodovi\n");
 		osvP=tastatura.nextInt();
-		
-		
+		procent=osvP/maxP*100;
+		if(procent>maxP) {
+			System.out.println("Osvoeni se povekje od maksimalnata kolicina bodovi");
+			System.exit(0);
+			}
+		if(procent<51){
+			System.out.println("studentot padnal");
+		} else if(procent<=60 && procent =>51){
+			System.out.println("studentot dobil 6");
+		}else if(procent<=70 && procent =>51){
+			System.out.println("studentot dobil 7");
+		}else if(procent<=80 && procent =>51){
+			System.out.println("studentot dobil 8");
+		}else if(procent<=90 && procent =>51){
+			System.out.println("studentot dobil 9");
+		}else if(procent>90 && procent <=100){
+			System.out.println("studentot dobil 10");
+		}
 		
 	}
 
